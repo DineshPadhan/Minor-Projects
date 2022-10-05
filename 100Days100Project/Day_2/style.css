@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #efefef;
+}
+.wrapper {
+    height: 500px;
+    width: 750px;
+    background: #fff;
+    border: 17px solid;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+.wrapper .images{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.wrapper .images .images1 {
+    height: 100%;
+    width: 100%;
+    background: url('img/img_1.jpg') no-repeat;
+}
+.wrapper .images .images2 {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: url('img/img_2.jpg') no-repeat;
+}
+.wrapper .slider{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.wrapper .slider input{
+    width: 100%;
+    outline: none;
+    background: none;
+    -webkit-appearance: none;
+}
+.slider input::-webkit-slider-thumb{
+    height: 466px;
+    width: 3px;
+    background: none;
+    -webkit-appearance: none;
+    cursor: col-resize;
+}
+.slider .dragLine{
+    width: 3px;
+    height: 466px;
+    position: absolute;
+    left: 49.85%;
+    pointer-events: none;
+}
+.slider .dragLine::before,
+.slider .dragLine::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 213px;
+    background: #fff;
+}
+.slider .dragLine::before{
+    top: 0;
+}
+.slider .dragLine::after{
+    bottom: 0;
+}
+.slider .dragLine span{
+    height: 42px;
+    width: 42px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider .dragLine span::before,
+.slider .dragLine span::after{
+     position: absolute;
+     content: "";
+     top: 50%;
+     border: 10px solid transparent;
+     border-bottom-width: 0px;
+     border-right-width: 0px;
+     transform: translate(-50%, -50%) rotate(45deg);
+}
+.slider .dragLine span::before{
+    left: 40%;
+    border-left-color: #fff;
+}
+.slider .dragLine span::after{
+    left: 60%;
+    border-top-color: #fff;
+}
