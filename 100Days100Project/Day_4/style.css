@@ -24,8 +24,8 @@ body{
                 5px 5px 7px rgba(0, 0, 0, 0.5);
 }
 .clock .display{
-    font-size: 60px;
+    font-size: 80px;
     color: #00ffff;
-    letter-spacing: 5px;
-    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 10px;
+    font-family: 'Technology', sans-serif;
 }
