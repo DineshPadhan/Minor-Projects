@@ -1,0 +1,56 @@
+html, body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #FFF;
+    overflow: hidden;
+}
+.outer{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#FEED07 0%, #FE6A50 5%, #ED00AA 15%,#2FE3FE 50%,#8900FF 100%);
+    animation: rotate 2s ease infinite;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.inner{
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    line-height: 275px;
+    border-radius: 50%;
+    text-align: center;
+    background: #FFF;
+}
+.inner span{
+    font-size: 70px;
+    font-weight: bold;
+    background: linear-gradient(#83f5e5 0%, #9cd0db 5%, #b5abd1 15%,#ce86c7 50%,#e761bd  100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.outer.active-loder{
+    animation: rotate2 2s ease infinite;
+}
+
+@keyframes rotate2{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.outer.active-loder-2{
+    animation: rotate3 1s ease;
+}
+
+@keyframes rotate3{
+    to{
+        transform: rotate(360deg);
+    }
+}
