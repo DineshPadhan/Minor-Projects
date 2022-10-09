@@ -1,3 +1,5 @@
+const { response } = require("express")
+
 const urlField = document.querySelector(".field input")
 const previewArea = document.querySelector(".preview-area")
 const imgTag = previewArea.querySelector(".thumbnail")
@@ -26,26 +28,27 @@ urlField.onkeyup = (hiddeInput) => {
     hiddeInput.value = imgTag.src; // passing immg src to hidden input value
 
     downloadBtn.addEventListener("click", (a) => {
-        a.preventDefault(); // preventing form from submitting
-        fetchFile(hiddeInput.value);
-        // console.log(imgTag.src);
-    });
-    
-    function fetchFile(url) {
-        // fetching file & returning response as blob
-        fetch(url).then(res => res.blob()).then(file => {
-            let tempUrl = URL.createObjectURL(file);
-            // console.log(tempUrl);
-            let aTag = document.createElement("a");
-            aTag.href = tempUrl;
-            aTag.download = "filename";
-            document.body.appendChild(aTag);
-            console.log(aTag);
-            aTag.click();
-            aTag.remove();
+        axios({
+            url: imgTag.src,
+            method: 'GET',
+            ResponseType: 'blob'
+        })
+            .then((response)=> {
+            const url = window.URL.createObjectURL(new Blob[response.data]);
+
+            const link = document.createElement('a');
+
+            link.href = link;
+
+            link.setAttribute('download', 'thumbnail.jpg');
+
+            document.body.appendChild(link);
+
+            link.click();
         });
-    }
-    
-    
+    });
+
+
+
 }
 
