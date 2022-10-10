@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://code.jquery.com/jquery-3.6.1.js'></script>
+    <!-- google place suggection -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCzoax2imPLuSmcR1axo5UGccF3ChUHMQ4"></script>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" class="search" id="search_input" placeholder="Search By Loaction">
+    </form>
+    <main id="main">
+
+    </main>
+
+
+
+
+
+    <script src="app.js"></script>
+    <script>
+         
+var searchInput = 'search_input';
+ 
+ $(document).ready(function () {
+  var autocomplete;
+  autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+   types: ['geocode'],
+   /*componentRestrictions: {
+    country: "USA"
+   }*/
+  });
+   
+  google.maps.event.addListener(autocomplete, 'place_changed', function () {
+   var near_place = autocomplete.getPlace();
+  });
+ });
+    </script>
+</body>
+
+</html>
