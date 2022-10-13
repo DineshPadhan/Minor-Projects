@@ -4,6 +4,7 @@ $(document).ready(function () {
             $('i').css({
                 "opacity":"1","pointer-events":"auto"
             });
+            
         }else{
             $('i').css({
                 "opacity":"0","pointer-events":"none"
