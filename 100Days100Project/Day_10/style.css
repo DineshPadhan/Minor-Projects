@@ -1,0 +1,22 @@
+.fas{
+    width: 40px;
+    height: 40px;
+    color: azure;
+    background: #5e5e5e;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px !important;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out;
+}
+.fas:hover{
+    background: #7b7b7b;
+    transition: .3s ease  ;
+}
