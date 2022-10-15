@@ -87,4 +87,5 @@ button:active {
 button:disabled{
     background: #82829f;
     color: #3b4b84;
+    pointer-events: none;
 }
