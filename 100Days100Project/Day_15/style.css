@@ -1,0 +1,16 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.txt{
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+button{
+    padding: 10px 30px;
+    margin: 10px;
+}
