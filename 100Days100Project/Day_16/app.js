@@ -1,16 +1,30 @@
-let randomNum = parseInt(Math.random() * 99);
-console.log(randomNum);
-let inputNum = $('input').val();
+// random value generated
+var y = Math.floor(Math.random() * 99 + 1);
+	console.log(y);
+    
+// counting the number of guesses
+// made for correct Guess
+var guess = 1;
 
-$('button').click(function () {
-    if (randomNum = inputNum) {
-        $('.ans').text("Congratulations You Got the Number");
-    }else{
-        if (inputNum > randomNum) {
-            $('.ans').text('Number is too big, please try again');
-        }
-        else if (inputNum < randomNum) {
-            $('.ans').text('Number is too small, please try again');
-        }
-    }
-});
+document.getElementById("submitguess").onclick = function(){
+
+// number guessed by user	
+var x = document.getElementById("guessField").value;
+
+if(x == y)
+{	
+("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+        + guess + " GUESS ");
+}
+else if(x > y) /* if guessed number is greater
+            than actual number*/
+{	
+guess++;
+alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+}
+else
+{
+guess++;
+alert("OOPS SORRY!! TRY A GREATER NUMBER")
+}
+}
