@@ -47,10 +47,13 @@
 # for num in my_set:
 #     print(num, end=", ")    #Output: 1, 2, 3, 
 
-line_num = 1
-with open('myfile.txt', 'r') as f:
-    for line in f:
-        print(line_num, end=": ")
-        print(line)
-        line_num += 1
-# print(line_num)
+# line_num = 1
+# word_count = 0
+# with open('myfile.txt', 'r') as f:
+#     for line in f:
+#         print(line_num, end=": ")                         #it print all the line number
+#         print(line)                                       #it print all the line 
+#         line_num += 1
+#         words = line.split()                              #it is for splitting word from the line
+#         word_count += len(words)                          #it is counting the total word                         
+# print("Total Word used in the file is:",word_count)       #it print the total word
