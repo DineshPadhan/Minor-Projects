@@ -1,5 +1,7 @@
 s="Python"
-for ch in s:
-    if ch=="h":
+ch=0
+while(ch<len(s)):
+    if s[ch]=="h":
         break
-    print(ch)
+    print(s[ch])
+    ch+=1
