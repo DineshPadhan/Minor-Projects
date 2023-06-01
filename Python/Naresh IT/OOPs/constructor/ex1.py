@@ -1,0 +1,1 @@
+# write a python program which will acept student details such as sno,sname and marks in 3 subject. calculate the total mark, percentage, and grade. store all details in the student table of mySql.
